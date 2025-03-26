@@ -1,7 +1,7 @@
 import requests
 
 def get_exchange_rates(base_currency="USD"):
-    url = f"https://v6.exchangerate-api.com/v6/8f8881c815cce8dd6541e52c/latest/{base_currency}"
+    url = f"https://v6.exchangerate-api.com/v6/<Api_Key>/latest/{base_currency}"
     response = requests.get(url)
     data = response.json()
     if data["result"] == "success":
